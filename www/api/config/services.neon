@@ -1,0 +1,18 @@
+services:
+	- App\Core\RouterFactory::createRouter
+	bookModel: App\Model\BookModel
+	- App\GraphQL\Types\BookType
+	- App\GraphQL\Definitions\JsonType
+	- App\GraphQL\SchemaFactory
+	- App\GraphQL\Types\RootMutationType
+	- App\GraphQL\Types\RootQueryType
+	- Tomaj\NetteApi\Link\ApiLink
+	- Tomaj\NetteApi\Misc\IpDetector
+	- App\Api\Schemes\BookSchema
+	graphQLEndpointHandler : App\Api\v1\GraphQLEndpointHandler()
+	staticTokenRepository: Tomaj\NetteApi\Misc\StaticTokenRepository(['dasfoihwet90hidsg': '*'])
+	apiDecider:
+	    factory: Tomaj\NetteApi\ApiDecider
+	    setup:
+	        - addApi(Tomaj\NetteApi\EndpointIdentifier('POST', 1, 'graphql'), @graphQLEndpointHandler , Tomaj\NetteApi\Authorization\HeaderApiKeyAuthentication('X-API-KEY', @staticTokenRepository))
+	        - addApi(Tomaj\NetteApi\EndpointIdentifier('GET', 1, 'docs', 'open-api'), Tomaj\NetteApi\Handlers\OpenApiHandler() , Tomaj\NetteApi\Authorization\NoAuthorization())

@@ -1,0 +1,5 @@
+.DS_Store
+.idea
+www/vendor
+www/temp
+www/log

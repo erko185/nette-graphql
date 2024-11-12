@@ -1,0 +1,11 @@
+parameters:
+    applicationMapping:
+        Api: Tomaj\NetteApi\Presenters\*Presenter
+
+application:
+	mapping: %applicationMapping%
+
+database:
+	dsn: "%database.default.adapter%:host=%database.default.host%;dbname=%database.default.dbname%"
+	user: %database.default.user%
+	password: %database.default.password%

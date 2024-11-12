@@ -1,0 +1,9 @@
+parameters:
+   database:
+        default:
+            adapter: mysql
+            host: mysql-db
+            dbname: api
+            user: api
+            password: '123'
+            charset: utf8mb4
