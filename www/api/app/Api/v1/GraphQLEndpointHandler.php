@@ -64,7 +64,7 @@ Required:
 </ul>
 Example: <br>
 {
-  "query": "mutation { updateBook(id: 2, input: \"{&bsol;&bsol;&bsol;"title&bsol;&bsol;&bsol;": &bsol;&bsol;&bsol;"aaa Title&bsol;&bsol;&bsol;"}\") { id title author year_publication updated_at } }"
+  "query": "mutation { updateBook(id: 2, input: \"{&bsol;&bsol;&bsol;"title&bsol;&bsol;&bsol;": &bsol;&bsol;&bsol;"Update Title&bsol;&bsol;&bsol;"}\") { id title author year_publication updated_at } }"
 }
 
 </div>

@@ -6,7 +6,7 @@ Graphql api for crud operation with docker image
 Requirements
 ------------
 
-This Web Project is compatible with Nette 3.1 and requires PHP 8.2.
+This Web Project is compatible with Nette 3.1 and requires PHP 8.2 and set standard PHP Static Analysis on level 8
 
 Installation
 ------------
